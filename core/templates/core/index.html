@@ -1,0 +1,306 @@
+{% extends "core/base.html" %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+    
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<img class="img-fluid" src="{% static 'core/images/logo.png' %}" alt="" />
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#testimonials">Testimonials</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#blog">Blog</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#contact">Contect Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+	
+	<section id="home" class="main-banner parallaxie" style="">
+		<div class="heading">
+            <div class="container">
+                <div class="row justify-content-end">
+                    <div class="col-lg-4">
+                        {% if messages %}  
+                            {% for message in messages %}
+                                <div class="alert alert-{{message.tags}} alert-dismissible fade show" role="alert">
+                                    <strong>{{ message }}</strong>
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+			<h1>hello i'm Rakibul Islam</h1>
+			<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, <br>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
+			<h3 class="cd-headline clip is-full-width">
+				<span>Lorem ipsum dolor sit amet </span>
+				<span class="cd-words-wrapper">
+					<b class="is-visible">Web Developer</b>
+					<b>Graphic Designer</b>
+				</span>
+			</h3>
+		</div>
+	</section>
+
+    <div id="about" class="section wb">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="message-box">                        
+                        <h2>About Me</h2>
+                        <p> Integer rutrum ligula eu dignissim laoreet. Pellentesque venenatis nibh sed tellus faucibus bibendum. Sed fermentum est vitae rhoncus molestie. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo. </p>
+						<p>Sed vitae rutrum neque. Ut id erat sit amet libero bibendum aliquam. Donec ac egestas libero, eu bibendum risus. Phasellus et congue justo.</p>
+
+                        <a href="#" class="sim-btn btn-hover-new" data-text="Hire Me"><span>Hire Me</span></a>
+                    </div><!-- end messagebox -->
+                </div><!-- end col -->
+
+                <div class="col-md-6">
+                    <div class="right-box-pro wow fadeIn">
+                        <img src="{% static 'core/uploads/about_04.jpg' %}" alt="" class="img-fluid img-rounded">
+                    </div><!-- end media -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+    <div id="services" class="section lb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Services</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div><!-- end title -->
+
+            <div class="row">
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-seo"></i>
+						</div>
+						<h2>Web Development</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+                <div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-development"></i>
+						</div>
+						<h2>Responsive Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-process"></i>
+						</div>
+						<h2>Creative Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-discuss-issue"></i>
+						</div>
+						<h2>Support</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-idea"></i>
+						</div>
+						<h2>Web Idea</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+				<div class="col-md-4">
+                    <div class="services-inner-box">
+						<div class="ser-icon">
+							<i class="flaticon-idea-1"></i>
+						</div>
+						<h2>Graphic Design</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+	
+	<div id="portfolio" class="section lb">
+		<div class="container">
+			<div class="section-title text-left">
+                <h3>Portfolio</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div><!-- end title -->
+			
+			<div class="gallery-menu row">
+				<div class="col-md-12">
+					<div class="button-group filter-button-group text-left">
+						<button class="active" data-filter="*">All</button>
+						<button data-filter=".web">Web Development</button>
+						<button data-filter=".graphics">Graphic Design</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="gallery-list row">
+                {% for p in portfolio %}
+                    <div class="col-md-4 col-sm-6 gallery-grid {{p.category}}">
+                        <div class="gallery-single fix">
+                            <img src="{{ p.image.url }}" class="img-fluid" alt="Image">
+                            <div class="img-overlay">
+                                <a href="{{ p.image.url }}" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+                {% comment %} <div class="col-md-4 col-sm-6 gallery-grid graphics">
+                    <div class="gallery-single fix">
+                        <img src="uploads/gallery_img-02.jpg" class="img-fluid" alt="Image">
+                        <div class="img-overlay">
+                            <a href="uploads/gallery_img-02.jpg" data-rel="prettyPhoto[gal]" class="hoverbutton global-radius"><i class="fa fa-picture-o"></i></a>
+                        </div>
+                    </div>
+                </div> {% endcomment %}
+				
+				
+			</div>
+			</div>
+		</div>
+	</div>
+	
+	 <div id="testimonials" class="section wb">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Testimonials</h3>
+                <p>We thanks for all our awesome testimonials! There are hundreds of our happy customers! </p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+
+                        {% for review in testimonials %}
+
+                        <div class="testimonial clearfix">
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> {{review.title}}</h3>
+                                <p class="lead">{{review.description}}</p>
+                            </div>
+                            <div class="testi-meta">
+                                <img src="uploads/testi_01.png" alt="" class="img-fluid alignleft">
+                                {% if review.website %}
+                                    <h4>{{review.name}} <small>- {{review.designation}}, <a href="{{review.website}}">{{review.company}}</a></small></h4>
+                                {% else %}
+                                    <h4>{{review.name}} <small>- {{review.designation}}, {{review.company}}</small></h4>
+                                {% endif %}
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        
+                        {% endfor %}
+
+                        <!-- end testimonial -->
+
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <div id="contact" class="section db">
+        <div class="container">
+            <div class="section-title text-left">
+                <h3>Contact</h3>
+                <p>Quisque eget nisl id nulla sagittis auctor quis id. Aliquam quis vehicula enim, non aliquam risus.</p>
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="contact_form">
+                        <div id="message">
+                            <form action="" method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            {% comment %} <button type="submit">send</button> {% endcomment %}
+                            <button id="sendMessageButton" class="sim-btn btn-hover-new" data-text="Send Message" type="submit">Send Message</button>
+                            </form>
+                        </div>
+                        {% comment %} <form method="POST" id="contactForm" name="sentMessage" novalidate>
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{ form.name }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.email }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form.phone }}
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        {{ form.message }}
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <button id="sendMessageButton" class="sim-btn btn-hover-new" data-text="Send Message" type="submit">Send Message</button>
+                            </div>
+                            <!-- <div class="col-md-12 text-center">
+                                <div id="success"></div>
+                                <input type="submit" value="Send Message" id="sendMessageButton" class="sim-btn btn-hover-new" data-text="Send Message">
+                                <button id="sendMessageButton" class="sim-btn btn-hover-new" data-text="Send Message" type="submit">Send Message</button>
+                            </div> -->
+                        </form> {% endcomment %}
+                    </div>
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+
+    {% endblock content %}
